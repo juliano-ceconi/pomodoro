@@ -29,14 +29,11 @@
 }
 
 body.agent-mode-active {
+  --matrix-bg: #000000;
   --matrix-green: #ff4500; /* Vibrant fiery orange */
   --matrix-glow: rgba(255, 69, 0, 0.6);
   --matrix-dim: #8b0000; /* Deep crimson for shadows/borders */
-  background: radial-gradient(
-    circle at center,
-    #1a0505 0%,
-    var(--matrix-bg) 80%
-  );
+  background: #000000;
 }
 
 body.break-mode-active {
