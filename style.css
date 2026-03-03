@@ -1,11 +1,11 @@
 :root {
   /* Theme Palette */
-  --matrix-bg: #0d0f12; /* Deepest */
-  --matrix-dark: #1a1c23;
-  --matrix-gray: #2d313a;
-  --matrix-green: #c41e3a; /* Crimson */
-  --matrix-dim: #ffd700; /* Gold */
-  --matrix-glow: rgba(196, 30, 58, 0.5);
+  --matrix-bg: #100d14; /* Deep Aubergine / Black */
+  --matrix-dark: #1c1822; /* Dark Plum Panel */
+  --matrix-gray: #2c2535; /* Muted Grape Gray */
+  --matrix-green: #e6b8c4; /* Soft Rose Gold / Blush */
+  --matrix-dim: #bda3af; /* Muted Dusty Rose */
+  --matrix-glow: rgba(230, 184, 196, 0.4); /* Gentle Rose Glow */
 
   --slate-800: var(--matrix-dark); /* Remap for compatibility */
   --slate-900: var(--matrix-bg);
@@ -135,7 +135,8 @@ body {
   font-weight: 700;
   font-size: 1rem;
   color: var(--matrix-dim);
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  text-shadow: 0 0 10px var(--matrix-glow);
+  box-shadow: 0 0 10px rgba(230, 184, 196, 0.2);
   flex-shrink: 0;
   letter-spacing: 1px;
 }
@@ -148,7 +149,7 @@ body {
   font-size: 1rem;
   color: var(--matrix-green);
   text-transform: uppercase;
-  text-shadow: 0 0 5px var(--matrix-dim);
+  text-shadow: 0 0 8px var(--matrix-glow);
   margin-top: 2px;
 }
 
@@ -545,6 +546,13 @@ body {
   background: var(--matrix-green);
   color: #111;
   box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6);
+}
+
+.agent-mode-active .avatar-glitch {
+  color: var(--matrix-green);
+  border-color: var(--matrix-green);
+  text-shadow: 0 0 15px var(--matrix-glow);
+  box-shadow: 0 0 15px var(--matrix-glow);
 }
 
 .agent-mode-active .crt-overlay {

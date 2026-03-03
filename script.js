@@ -371,7 +371,7 @@ function loadGame() {
     const parsed = JSON.parse(saved);
 
     // Restore numeric stats
-    gameState.xp = parsed.xp !== undefined ? parsed.xp : 1700;
+    gameState.xp = parsed.xp !== undefined ? parsed.xp : 0;
     gameState.level = parsed.level || 0;
     gameState.streak = parsed.streak || 0;
     gameState.lastLogin = parsed.lastLogin;
