@@ -1,6 +1,6 @@
 // Game State
 let gameState = {
-  xp: 1700,
+  xp: 0,
   level: 0,
   missions: [
     {
@@ -18,7 +18,7 @@ let gameState = {
       completed: false,
       xp: 500,
     },
-    { id: 3, text: "Ouvir 'Back to Black' inteira", completed: false, xp: 100 },
+    { id: 3, text: "Meditar por 2 min (mínimo)", completed: false, xp: 100 },
     {
       id: 4,
       text: "Beber 500ml de água",
@@ -28,8 +28,8 @@ let gameState = {
       currentProgress: 0,
       targetProgress: 4,
     },
-    { id: 5, text: "Acariciar um gato ou cachorro", completed: false, xp: 200 },
-    { id: 6, text: "Assistir um ep de GoT ou ouvir RHCP", completed: false, xp: 500 },
+    { id: 5, text: "Arrumar 5 coisas", completed: false, xp: 200 },
+    { id: 6, text: "Exercício físico 2 min (mínimo)", completed: false, xp: 500 },
   ],
 
   streak: 0,
@@ -47,7 +47,7 @@ const LEVELS = [
   { name: "Ouvinte Curiosa", xp: 103 },
   { name: "Admiradora de Gatos", xp: 284 },
   { name: "Aprendiz de Arya", xp: 583 },
-  { name: "Fã de RHCP", xp: 1017 },
+  { name: "Iniciada do Norte", xp: 1017 },
   { name: "Garota de Winterfell", xp: 1600 },
   { name: "Devoradora de Livros", xp: 2361 },
   { name: "Back to Black", xp: 3314 },
@@ -95,18 +95,21 @@ const LEVELS = [
 ];
 
 const QUOTES = [
-  "Valar Morghulis. Mas primeiro, foque.",
   "Um leitor vive mil vidas antes de morrer.",
-  "Dream of Californication.",
-  "I told you I was trouble, you know that I'm no good.",
   "O inverno está chegando. Termine suas tarefas.",
   "Você não sabe de nada... a menos que estude.",
   "A mente precisa de livros como uma espada precisa de uma pedra de amolar.",
-  "Tears dry on their own.",
-  "Can't stop the spirits when they need you.",
   "O caos não é um abismo. O caos é uma escada.",
   "Miau. Vá focar.",
-  "Deixe o cachorro esperando, faça acontecer agora.",
+  "O medo corta mais profundo que espadas. O foco corta mais que distrações.",
+  "Um leão não se preocupa com a opinião de ovelhas... nem com o Instagram.",
+  "Trabalhe como um Stark, relaxe como um Lannister (só na pausa!).",
+  "O Norte se lembra... que você deixou essa tarefa para depois ontem.",
+  "Sob pressão é onde os melhores solos acontecem.",
+  "Keep calm e escute Chili Peppers. Mas termina esse ciclo primeiro!",
+  "Gatos não procrastinam, eles apenas 'otimizam o descanso'.",
+  "Sua mente é sua arma. Mantenha-a afiada.",
+  "Tudo que temos de decidir é o que fazer com o tempo que nos é dado.",
 ];
 
 // Audio Context for Beeps
