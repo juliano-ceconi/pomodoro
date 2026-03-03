@@ -412,6 +412,21 @@ function toggleAgentModeVisuals(active) {
   } else {
     document.body.classList.remove("agent-mode-active");
   }
+
+  const mainTitle = document.querySelector(".glitch-text");
+  const subTitle = document.querySelector(".subtitle");
+  
+  if (mainTitle && subTitle) {
+    if (active) {
+      mainTitle.innerText = "FIRE AND BLOOD";
+      mainTitle.setAttribute("data-text", "FIRE AND BLOOD");
+      subTitle.innerText = "FOCUS LIKE A DRAGON.";
+    } else {
+      mainTitle.innerText = "WINTER IS COMING";
+      mainTitle.setAttribute("data-text", "WINTER IS COMING");
+      subTitle.innerText = "FOCUS LIKE A DIRE WOLF.";
+    }
+  }
 }
 
 function toggleBreakModeVisuals(active) {

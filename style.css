@@ -29,9 +29,14 @@
 }
 
 body.agent-mode-active {
-  --matrix-green: var(--agent-purple);
-  --matrix-glow: var(--agent-purple-glow);
-  --matrix-dim: #4c0082; /* Indigo/Deep Purple for dim elements */
+  --matrix-green: #ff4500; /* Vibrant fiery orange */
+  --matrix-glow: rgba(255, 69, 0, 0.6);
+  --matrix-dim: #8b0000; /* Deep crimson for shadows/borders */
+  background: radial-gradient(
+    circle at center,
+    #1a0505 0%,
+    var(--matrix-bg) 80%
+  );
 }
 
 body.break-mode-active {
@@ -123,7 +128,7 @@ body {
 
 .avatar-glitch {
   padding: 0 10px;
-  height: 50px; 
+  height: 50px;
   background: var(--matrix-dark);
   border: 1px solid var(--matrix-dim);
   border-radius: 4px;
@@ -131,7 +136,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1rem; 
+  font-size: 1rem;
   color: var(--matrix-dim);
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
   flex-shrink: 0;
@@ -503,24 +508,54 @@ body {
 }
 
 /* Agent Mode Visual States - Now mostly handled by CSS variables */
+@keyframes dragon-breathe {
+  0% {
+    text-shadow: 0 0 15px var(--matrix-glow);
+  }
+  50% {
+    text-shadow:
+      0 0 35px var(--matrix-glow),
+      0 0 10px var(--matrix-green);
+  }
+  100% {
+    text-shadow: 0 0 15px var(--matrix-glow);
+  }
+}
+
 .agent-mode-active .btn-protocol {
   border-color: var(--matrix-green);
   color: var(--matrix-green);
   opacity: 1; /* Brilho total para combinar com o timer */
+  box-shadow: 0 0 10px var(--matrix-glow);
+}
+
+.agent-mode-active .glitch-text {
+  animation: dragon-breathe 4s infinite ease-in-out;
 }
 
 .agent-mode-active .timer-display {
-  text-shadow: 0 0 25px var(--matrix-green);
+  animation: dragon-breathe 4s infinite ease-in-out;
 }
 
 .agent-mode-active .btn-primary {
-  box-shadow: 0 4px 0 var(--matrix-dim);
+  box-shadow:
+    0 4px 0 var(--matrix-dim),
+    0 0 15px rgba(255, 69, 0, 0.2);
+  border-color: var(--matrix-green);
 }
 
 .agent-mode-active .btn-primary:hover {
   background: var(--matrix-green);
-  color: white;
-  box-shadow: 0 6px 15px var(--matrix-green);
+  color: #111;
+  box-shadow: 0 6px 20px rgba(255, 69, 0, 0.6);
+}
+
+.agent-mode-active .crt-overlay {
+  background: linear-gradient(
+    rgba(50, 0, 0, 0.05) 50%,
+    rgba(50, 0, 0, 0.1) 50%
+  );
+  background-size: 100% 4px;
 }
 
 @media (max-width: 768px) {
@@ -612,7 +647,7 @@ body {
   }
 
   .timer-display {
-    font-size: 5.5rem; 
+    font-size: 5.5rem;
     padding-top: 1rem;
     text-shadow: 0 0 20px var(--matrix-glow);
   }
