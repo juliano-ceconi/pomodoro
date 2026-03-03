@@ -258,7 +258,7 @@ function updateLevel() {
   // Update Operator ID (Dynamic visual)
   const opId = document.getElementById("operator-id");
   const levelIndex = LEVELS.indexOf(currentLevel);
-  const opText = `OP_${String(levelIndex + 1).padStart(2, "0")}`;
+  const opText = `${String(levelIndex + 1).padStart(2, "0")}`;
   opId.innerText = opText;
   opId.setAttribute("data-text", opText);
 
