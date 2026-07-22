@@ -1,7 +1,9 @@
 ---
 status: backlog
-type: folder
-tags: [projeto]
+type: projeto
+area: portfólio
+parent: [[Dashboard_Central]]
+tags: [area/portfólio]
 stack: ["[[IA_Autonoma]]", "[[HTML]]", "[[CSS]]", "[[JavaScript]]"]
 ---
 # Projeto: pomodoro
