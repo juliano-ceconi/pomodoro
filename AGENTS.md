@@ -1,4 +1,4 @@
-﻿# 🤖 Protocolo de Agentes: Pomodoro Alana Edition
+# 🤖 Protocolo de Agentes: Pomodoro Alana Edition
 
 ## ⚡ Interação ADHD-Friendly
 
@@ -33,7 +33,7 @@
 
 - **Regra:** Não utilize comentários extensos no código para explicar decisões
   arquiteturais.
-- **Ação:** Registre todas as mudanças importantes e seus "porquês" no arquivo [DECISIONS.md](file:///d:/Projetos/pomodoro/DECISIONS.md).
+- **Ação:** Registre todas as mudanças importantes e seus "porquês" no arquivo [DECISIONS.md](DECISIONS.md).
 
 ## 📝 Padrões de Comunicação e Git
 
